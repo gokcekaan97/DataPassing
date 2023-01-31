@@ -33,7 +33,7 @@ class ViewController: UIViewController {
   }
   @objc func displayString (notification: NSNotification){
     let tempText = notification.userInfo?["userInfo"] as? String ?? ""
-    myThirdLabel.text = "\(self.mySingletonClassReferance.displayMyString()) \(tempText)"
+    myThirdLabel.text = self.mySingletonClassReferance.changeString(tempText)
   }
 }
 

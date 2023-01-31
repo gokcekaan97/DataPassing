@@ -8,8 +8,7 @@
 import Foundation
 
 class SingletonClass {
-  var singletonClassText: String = "label: "
-  func displayMyString () -> String {
-    return self.singletonClassText
+  let changeString: (_ text: String) -> String = { (text) in
+    return "label: \(text)"
   }
 }

@@ -8,7 +8,6 @@
 import Foundation
 
 protocol DelegateProtocol: AnyObject {
-  
   func textMyString(_ text: String)
   func textMySecondString(_ text: String)
 }
