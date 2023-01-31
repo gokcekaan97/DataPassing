@@ -45,10 +45,20 @@
                                     <action selector="getLabelText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bNb-nA-6sT"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fn8-Nr-xGC">
+                                <rect key="frame" x="48" y="363" width="297" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="Kan-Rd-tOY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fn8-Nr-xGC" secondAttribute="trailing" constant="48" id="1ke-ca-cwd"/>
                             <constraint firstItem="No2-96-cQC" firstAttribute="top" secondItem="pbz-3P-GhS" secondAttribute="bottom" constant="52" id="8yP-RT-9df"/>
                             <constraint firstItem="R8z-at-qEf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="48" id="Ahz-1L-G9a"/>
                             <constraint firstItem="pbz-3P-GhS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="48" id="Pgx-2l-iXR"/>
@@ -57,13 +67,16 @@
                             <constraint firstItem="No2-96-cQC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="48" id="U9N-XH-Vih"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pbz-3P-GhS" secondAttribute="trailing" constant="48" id="UVm-il-yVG"/>
                             <constraint firstItem="pbz-3P-GhS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="52" id="eOY-UE-f87"/>
+                            <constraint firstItem="fn8-Nr-xGC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="48" id="pTb-fX-Kq0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="R8z-at-qEf" secondAttribute="bottom" constant="52" id="uXp-eZ-TVP"/>
+                            <constraint firstItem="fn8-Nr-xGC" firstAttribute="top" secondItem="No2-96-cQC" secondAttribute="bottom" constant="52" id="uua-dP-Hqn"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="mBw-Rw-tuP"/>
                     <connections>
                         <outlet property="myLabel" destination="pbz-3P-GhS" id="Ref-OH-TUW"/>
-                        <outlet property="mySecondLabel" destination="No2-96-cQC" id="Z3A-Cu-uqL"/>
+                        <outlet property="mySecondLabel" destination="No2-96-cQC" id="nIB-jM-ate"/>
+                        <outlet property="myThirdLabel" destination="fn8-Nr-xGC" id="Pla-hj-00O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -105,6 +118,14 @@
                                     <action selector="buttonPressed:" destination="btT-Px-7wo" eventType="touchUpInside" id="tCh-cx-A92"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZXM-ZC-Zg1">
+                                <rect key="frame" x="48" y="319" width="297" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="xiF-zS-QLc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vxi-CS-ElQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -113,16 +134,20 @@
                             <constraint firstItem="0uh-7B-OqB" firstAttribute="leading" secondItem="vxi-CS-ElQ" secondAttribute="leading" constant="48" id="6aW-Tg-Dew"/>
                             <constraint firstItem="vxi-CS-ElQ" firstAttribute="trailing" secondItem="tmt-y5-OKb" secondAttribute="trailing" constant="48" id="7Xc-XJ-u8l"/>
                             <constraint firstItem="vxi-CS-ElQ" firstAttribute="trailing" secondItem="CYw-yn-uKC" secondAttribute="trailing" constant="48" id="GW3-RB-nza"/>
+                            <constraint firstItem="ZXM-ZC-Zg1" firstAttribute="leading" secondItem="vxi-CS-ElQ" secondAttribute="leading" constant="48" id="ISa-Ge-3RN"/>
                             <constraint firstItem="0uh-7B-OqB" firstAttribute="top" secondItem="vxi-CS-ElQ" secondAttribute="top" constant="52" id="UtY-s2-hZk"/>
                             <constraint firstItem="vxi-CS-ElQ" firstAttribute="bottom" secondItem="tmt-y5-OKb" secondAttribute="bottom" constant="52" id="Wu4-9I-fFf"/>
+                            <constraint firstItem="ZXM-ZC-Zg1" firstAttribute="top" secondItem="CYw-yn-uKC" secondAttribute="bottom" constant="52" id="XiO-Ca-yg8"/>
                             <constraint firstItem="tmt-y5-OKb" firstAttribute="leading" secondItem="vxi-CS-ElQ" secondAttribute="leading" constant="48" id="aBY-af-47y"/>
+                            <constraint firstItem="vxi-CS-ElQ" firstAttribute="trailing" secondItem="ZXM-ZC-Zg1" secondAttribute="trailing" constant="48" id="p64-Im-pXs"/>
                             <constraint firstItem="CYw-yn-uKC" firstAttribute="leading" secondItem="vxi-CS-ElQ" secondAttribute="leading" constant="48" id="qdd-QK-xh1"/>
                             <constraint firstItem="vxi-CS-ElQ" firstAttribute="trailing" secondItem="0uh-7B-OqB" secondAttribute="trailing" constant="48" id="z1Z-0V-Z3d"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="mySecondText" destination="CYw-yn-uKC" id="hq7-zD-eNM"/>
+                        <outlet property="mySecondText" destination="CYw-yn-uKC" id="PDj-hT-JDy"/>
                         <outlet property="myText" destination="0uh-7B-OqB" id="rYG-ug-84k"/>
+                        <outlet property="myThirdText" destination="ZXM-ZC-Zg1" id="XtH-6j-MsT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oCZ-On-R2I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

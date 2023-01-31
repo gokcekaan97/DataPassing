@@ -16,6 +16,7 @@
 		279A6AEA29890556004E7DD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 279A6AE829890556004E7DD2 /* LaunchScreen.storyboard */; };
 		279A6AF2298908FE004E7DD2 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279A6AF1298908FE004E7DD2 /* SecondViewController.swift */; };
 		279A6AF42989094D004E7DD2 /* Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279A6AF32989094D004E7DD2 /* Delegate.swift */; };
+		279A6AF629891272004E7DD2 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279A6AF529891272004E7DD2 /* Singleton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		279A6AEB29890556004E7DD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		279A6AF1298908FE004E7DD2 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		279A6AF32989094D004E7DD2 /* Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delegate.swift; sourceTree = "<group>"; };
+		279A6AF529891272004E7DD2 /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				279A6AE829890556004E7DD2 /* LaunchScreen.storyboard */,
 				279A6AEB29890556004E7DD2 /* Info.plist */,
 				279A6AE329890555004E7DD2 /* DataPassing.xcdatamodeld */,
+				279A6AF529891272004E7DD2 /* Singleton.swift */,
 			);
 			path = DataPassing;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				279A6AF42989094D004E7DD2 /* Delegate.swift in Sources */,
+				279A6AF629891272004E7DD2 /* Singleton.swift in Sources */,
 				279A6ADF29890555004E7DD2 /* ViewController.swift in Sources */,
 				279A6ADB29890555004E7DD2 /* AppDelegate.swift in Sources */,
 				279A6ADD29890555004E7DD2 /* SceneDelegate.swift in Sources */,
