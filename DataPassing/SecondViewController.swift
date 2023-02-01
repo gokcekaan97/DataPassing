@@ -9,11 +9,11 @@ import UIKit
 
 class SecondViewController: UIViewController {
   
-  @IBOutlet weak var myText: UITextField!
-  @IBOutlet weak var mySecondText: UITextField!
-  @IBOutlet weak var myThirdText: UITextField!
-  var myTempText: [String:String] = [:]
-  private let myNC = NotificationCenter.default
+  @IBOutlet private weak var myText: UITextField!
+  @IBOutlet private weak var mySecondText: UITextField!
+  @IBOutlet private weak var myThirdText: UITextField!
+  private var myTempText: [String:String] = [:]
+  private let notification = NotificationCenter.default
   
   weak var delegate: DelegateProtocol?
   
@@ -22,10 +22,10 @@ class SecondViewController: UIViewController {
     }
     
   @IBAction func buttonPressed(_ sender: Any) {
-    myTempText = ["userInfo":myThirdText.text ?? ""]
+    myTempText = ["textValue":myThirdText.text ?? ""]
     self.delegate?.textMyString(myText.text ?? "")
     self.delegate?.textMySecondString(mySecondText.text ?? "")
-    myNC.post(name: NSNotification.Name("com.user.DataPassing"),
+    notification.post(name: NSNotification.Name("com.user.DataPassing"),
               object: nil,
               userInfo: myTempText)
     self.navigationController?.popViewController(animated: true)

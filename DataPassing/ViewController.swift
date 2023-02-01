@@ -9,36 +9,38 @@ import UIKit
 
 class ViewController: UIViewController {
   
-  @IBOutlet weak var myLabel: UILabel!
-  @IBOutlet weak var mySecondLabel: UILabel!
-  @IBOutlet weak var myThirdLabel: UILabel!
-  var mySingletonClassReferance = SingletonClass()
-  private let myNC = NotificationCenter.default
+  @IBOutlet private weak var myLabel: UILabel!
+  @IBOutlet private weak var mySecondLabel: UILabel!
+  @IBOutlet private weak var myThirdLabel: UILabel!
+  private var mySingletonClassReferance = SingletonClass()
+  private let notification = NotificationCenter.default
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    myNC.addObserver(self,
-                     selector: #selector (self.displayString(notification:)),
+    notification.addObserver(self,
+                     selector: #selector (self.displayString(_:)),
                      name: NSNotification.Name("com.user.DataPassing"),
                      object: nil)
     // Do any additional setup after loading the view.
   }
   
   @IBAction func getLabelText(_ sender: Any) {
-    guard let secondView = self.storyboard?.instantiateViewController(identifier: "SecondViewController") as? SecondViewController else {
+    guard let secondViewController = self.storyboard?.instantiateViewController(identifier: "SecondViewController") as? SecondViewController else {
       fatalError("vc not found")
     }
-    secondView.delegate = self
-    navigationController?.pushViewController(secondView, animated: true)
+    secondViewController.delegate = self
+    navigationController?.pushViewController(secondViewController, animated: true)
   }
-  @objc func displayString (notification: NSNotification){
-    let tempText = notification.userInfo?["userInfo"] as? String ?? ""
+  @objc func displayString (_ notification: NSNotification){
+    let tempText = notification.userInfo?["textValue"] as? String ?? ""
     myThirdLabel.text = self.mySingletonClassReferance.changeString(tempText)
   }
+  // notification function be implemented later...
 }
 
 extension ViewController: DelegateProtocol {
   
+  // notification.name static variables should be initialized...
   func textMyString(_ text: String) {
     myLabel.text = "label: \(text)"
   }
